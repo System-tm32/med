@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<base href="/">
 
-	<title>OptimizedHTML 4</title>
+	<title>Клиника</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,8 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">   
 <script src="https://use.fontawesome.com/e60fc28032.js"></script>
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -36,6 +36,14 @@
 			<div class="container">
 				<div class="row">
 					<nav class="nav">
+						<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+
+						<label class="btn-menu" for="hmt">
+						  <span class="first"></span>
+						  <span class="second"></span>
+						  <span class="third"></span>
+						</label>
+
 						<ul class="menu-list">
 							<li class="list-item"><a href="#">Главная</a></li>
 							<li class="list-item"><a href="#">О компании</a></li>
@@ -50,7 +58,7 @@
 		<section class="information-us">
 			<div class="container">
 				<div class="row">
-
+					
 					<div class="col-4">
 						<div class="logo-wrapper">
 							<h1 class="logo-text">
@@ -83,7 +91,7 @@
 	<div class="carousel-wrapper">
 		<div class="owl-carousel">
 		    <div class="item" style=" background-image: url(img/med1.jpg);">
-	
+				<h3></h3>
 		    </div>
 		    <div class="item" style=" background-image: url(img/med2.jpg);">
 		    	
@@ -98,12 +106,15 @@
 	<div class="services-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="text-wrapper">
-					<h2 class="service-text">Услуги нашего центра</h2>
+				<div class="section-text-wrapper">
+					<h2 class="section-top-text">Услуги нашего центра</h2>
+					<div class="top-descr">
+						<span>Уже более 11 лет мы заботимся о здоровье своих пациентов!</span>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -115,7 +126,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -127,7 +138,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -139,7 +150,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -151,7 +162,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -163,7 +174,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="service-item">
 						<div class="img-wrapper">
 							<img src="img/123.jpeg" alt="">
@@ -181,12 +192,17 @@
 	<div class="about-us-wrapper">
 		<div class="container">
 			<div class="row">
-				<h2 class="service-text">Немного о нас</h2>
+				<div class="dark-section-text-wrapper">
+					<h2 class="dark-section-top-text">Немного о нас</h2>
+					<span class="dark-top-descr">Добро пожаловать на наш сайт</span>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-6">
-					<p>Lorem ipsum dolor sit amet.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora facilis reprehenderit explicabo, vero nihil! Eius blanditiis consequatur quasi molestias nisi, eum ullam sequi eligendi enim tempora atque repellat in, minus.</p>
+					<div class="about-content">
+						<p>Lorem ipsum dolor sit amet.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora facilis reprehenderit explicabo, vero nihil! Eius blanditiis consequatur quasi molestias nisi, eum ullam sequi eligendi enim tempora atque repellat in, minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita eos magni odio odit neque, quae similique nam ea quibusdam.</p>
+					</div>
 					<div class="btn">подробнее</div>
 				</div>
 				<div class="col-6">
@@ -201,8 +217,11 @@
 	<div class="reviews-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="reviews-title">
-					Отзывы
+				<div class="section-text-wrapper">
+					
+						<h2 class="section-top-text">Отзывы</h2>
+						<span class="top-descr">Клиенты говорят о нас</span>
+				
 				</div>
 			</div>
 			<div class="row">
@@ -211,10 +230,22 @@
 					<div class="review">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus modi sapiente explicabo, totam voluptatem saepe a quibusdam reiciendis placeat consequatur!
 					</div>
+					<div class="author">
+						<img src="img/aidar.png" alt="">
+						<div class="name">
+							Карманов Виктор
+						</div>
+					</div>
 				</div>
 				<div class="col-6">
 					<div class="review">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo dicta id, illo provident explicabo cumque mollitia enim libero quisquam!
+					</div>
+					<div class="author">
+						<img src="img/aidar.png" alt="">
+						<div class="name">
+							Александр Шувалов
+						</div>
 					</div>
 				</div>
 			</div>
@@ -223,10 +254,35 @@
 	<div class="specialists-wrapper">
 		<div class="container">
 			<div class="row">
+				<div class="dark-section-text-wrapper">
+					<h2 class="dark-section-top-text">
+						Специалисты
+					</h2>
+				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="specialist">
+						<img src="img/spec1.png" alt="">
+						<h4 class="spec-name">Астафьев Артур Алексеевич</h4>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="specialist">
+						<img src="img/spec.png" alt="">
+						<h4 class="spec-name">Антонова Наталья Геннадьевна</h4>
+					</div>
+				</div>
 				
 			</div>
 		</div>
 	</div>
+
+	<section class="map">
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad27844e33919a0040829c0724efdb256d8cbd29e06971464e6ca6bd899d56db1&amp;lang=ru_RU&amp;scroll=false"></script>
+	</section>
+	
 	<footer class="footer">
 		<div class="container">
 			<div class="row">

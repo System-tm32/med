@@ -12,11 +12,46 @@
 +media-breakpoint-down(md)
 	.container
 		max-width: 720px
+	.col-md-4
+		width: 50%
+	.nav-wrapper
+		height: 50px
+		.btn-menu 
+			display: block
+		.menu-list
+			flex-direction: column
+			display: block
+			position: fixed
+			list-style: none
+			padding: 10px
+			margin: 0
+			width: 200px
+			background-color: #32609E
+			height: 100%
+			top: 0
+			left: -200px
+			transition: left .2s
+			z-index: 2
+			-webkit-transform: translateZ(0)
+			-webkit-backface-visibility: hidden
 +media-breakpoint-down(sm)
 	.container
 		max-width: 540px
-+media-breakpoint-down(xs)
+	.col-4, .col-8, .col-6
+		width: 100%
+	.information-us
+		.logo-wrapper,.phone-wrapper
+			text-align: center
 
++media-breakpoint-down(xs)
+	.col-md-4
+		width: 100%
+	.information-us
+		.phone-wrapper
+			display: flex
+			flex-direction: column
+			.number
+				margin-bottom: 30px
 
 /*==========  Mobile First  ==========*/
 

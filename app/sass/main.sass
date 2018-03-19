@@ -17,7 +17,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: 'Roboto Condensed'
+	font-family: 'PT Serif'
 	input, textarea
 			border: #666 1px solid
 			outline: none
@@ -42,10 +42,11 @@ img
 	flex-wrap: wrap
 	margin-left: -15px
 	margin-right: -15px
-.col-4,.col-8
+.col-4,.col-8, .col-6, .col-md-4
 	padding-right: 15px
 	padding-left: 15px
-.col-4
+	min-height: 1px
+.col-4, .col-md-4
 	width: 33.333%
 .col-8
 	width:  66.666%
@@ -54,16 +55,67 @@ img
 
 .btn
 	padding: 20px
-	border: 2px solid #4FBEED
+	box-shadow: 0 0 0 1px #4FBEED
 	border-radius: 5px
 	color: #32609E
 	font-weight: bold
 	text-decoration: none
-	width: 100px
+	&:hover
+		text-decoration: none
+		box-shadow: 0 0 0 1px #4FBEED
+		background: #FC6F6A
+		color: #fff
+
+.hidden-menu-ticker 
+  display: none
+.btn-menu 
+  color: #fff
+  background-color: #fff
+  padding: 7px
+  position: fixed
+  top: 7px
+  left: 7px
+  cursor: pointer
+  transition: left .23s
+  z-index: 3
+  width: 45px
+  -webkit-transform: translateZ(0)
+  -webkit-backface-visibility: hidden
+  display: none
+  border-radius: 10%
+
+.btn-menu span 
+  display: block
+  height: 3px
+  background-color: #32609E
+  margin: 6px 0 0
+  transition: all .1s linear .23s
+  position: relative
+
+.btn-menu span.first 
+  margin-top: 0
+
+
+.hidden-menu-ticker:checked ~ .btn-menu 
+  left: 160px;
+
+.hidden-menu-ticker:checked ~ .menu-list 
+  left: 0;
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first 
+  -webkit-transform: rotate(45deg)
+  top: 9px
+  
+
+.hidden-menu-ticker:checked ~ .btn-menu span.second 
+  opacity: 0
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third 
+  -webkit-transform: rotate(-45deg)
+  top: -9px  
 
 .nav-wrapper
 	background: #32609E
-	height: 60px
 	.menu-list
 		display: flex
 		letter-spacing: 0.5px
@@ -73,17 +125,19 @@ img
 		margin: 0
 		padding: 0
 		.list-item
-			padding: 16px
 			a
+				padding: 17px
+				display: inline-block
 				text-decoration: none
 				color: #fff
 				cursor: pointer
-			&:hover
-				border-bottom: 3px solid #4FB5E6
+				transition: .1s linear
+				&:hover
+					box-shadow: inset 0px -3px 0px #4fb5e6
 
 .information-us
+	padding: 30px 0
 	.logo-wrapper
-		padding: 30px 0
 		line-height: .7
 		.logo-text
 			color: #4fb5e6
@@ -93,9 +147,8 @@ img
 			color: #32609E
 			text-transform: uppercase
 	.phone-wrapper
-		padding: 30px 0
 		text-align: right
-		line-height: 0.9
+		line-height: 1
 		.phone
 			display: inline-block
 			color: #4FBEED
@@ -104,6 +157,7 @@ img
 			.number
 				font-size: 30px
 				color: #32609E
+				font-weight: bold
 		.back-call
 			display: inline-block
 			
@@ -115,6 +169,7 @@ img
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: center center
+		background-color: #32609E
 	.owl-next, .owl-prev
 		position: absolute
 		top: 47%
@@ -126,8 +181,29 @@ img
 	.owl-next
 		right: 0
 
+.section-text-wrapper
+	text-align: center
+	width: 100%
+	margin-bottom: 30px
+	.section-top-text
+		font-size: 30px
+		color: #fff
+		font-weight: bold
+	.top-descr
+		color: rgba(255, 255, 255, 0.7)
+		font-size: 16px
 
-
+.dark-section-text-wrapper
+	text-align: left
+	width: 100%
+	margin-bottom: 30px
+	.dark-section-top-text
+		font-size: 30px
+		color: #000
+		font-weight: bold
+	.dark-top-descr
+		color: #000
+		font-size: 16px
 .services-wrapper
 	padding: 30px 0
 	background-color: #4fb5e6
@@ -139,7 +215,7 @@ img
 		background: #fff
 		margin-bottom: 20px
 		.item-content
-			padding: 30px
+			padding: 40px
 			font-size: 15px
 			.title
 				padding-bottom: 10px
@@ -152,18 +228,12 @@ img
 					background: #A4E6FF
 					position: absolute
 					top: 35%
-					left: -4%
+					left: -5%
 			.descr
-				padding: 5px
+				margin-bottom: 27px
+				color: rgba(41, 34, 53, 0.7)
 	.title
 		border-bottom: 1px solid #efefef
-	.text-wrapper
-		text-align: center
-		width: 100%
-		margin-bottom: 30px
-		.service-text
-			font-size: 30px
-			color: #fff
 	.btn
 		padding: 10px
 		&:hover
@@ -174,11 +244,13 @@ img
 
 .about-us-wrapper
 	padding: 50px 0
-	.service-text
-		font-size: 30px
-		font-weigh: bold
-		padding-bottom: 20px
-		border-bottom: 2px solid gray
+	.about-content
+		padding: 15px 0
+		border-top: 1px dashed rgba(34, 38, 50, 0.2)
+	.btn
+		padding: 10px
+		width: 110px
+
 .reviews-wrapper
 	background-color: #4FB5E6
 	padding: 40px 0
@@ -186,6 +258,47 @@ img
 	.review
 		background: #fff
 		padding: 50px
+		border-left: 20px solid #fc6f6a
+		color: rgba(41, 34, 53, 0.7)
+	.author
+		img
+			width: 100px
+			height: 100px
+			display: inline-block
+			border-radius: 50%
+			margin-right: 20px
+		.name
+			display: inline-block
+			padding-bottom: 10px
+			border-bottom: 1px solid #fff
+			width: 75%
+			font-weight: bold
+			color: #fff
+	.reviews-title
+		width: 100%
+		.text-wrapper
+			width: 100%
+			text-align: center
+			.service-text
+				font-size: 30px
+				color: #fff
+		p
+			color: #fff
+
+.specialists-wrapper
+	padding: 40px 0
+	.top-text
+		text-align: center
+		width: 100%
+		margin-bottom: 20px
+		border-bottom: 1px dashed gray
+		padding-bottom: 10px
+		.specialist
+			text-align: center
+
+.map
+	width: 100%
+	height: 500px
 .footer
 	padding: 50px 0
 	background: #262F42
