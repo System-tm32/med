@@ -5,14 +5,14 @@
 
 +media-breakpoint-down(xl)
 	.container
-		max-width: 1140px
+		max-width: 1200px
 +media-breakpoint-down(lg)
 	.container
-		max-width: 960px
+		max-width: 820px
 +media-breakpoint-down(md)
 	.container
-		max-width: 720px
-	.col-md-4
+		max-width: 640px
+	.col-md-4,
 		width: 50%
 	.nav-wrapper
 		height: 50px
@@ -35,13 +35,37 @@
 			-webkit-transform: translateZ(0)
 			-webkit-backface-visibility: hidden
 +media-breakpoint-down(sm)
-	.container
-		max-width: 540px
+
 	.col-4, .col-8, .col-6
 		width: 100%
 	.information-us
 		.logo-wrapper,.phone-wrapper
 			text-align: center
+	.information-us
+		.logo-wrapper
+			.logo-text
+				color: #4fb5e6
+				font-size: 20px
+				font-weight: bold
+			.logo-descr
+				color: #32609E
+				text-transform: uppercase
+		.phone-wrapper
+			.phone
+				.number
+					font-size: 20px
+			.back-call
+				.btn
+					padding: 20px
+	.about-us-wrapper
+		.img-wrapper
+			display: none
+	.specialists-wrapper
+		.specialist
+			text-align: center
+			img
+				width: 20%
+				margin: 0 auto
 
 +media-breakpoint-down(xs)
 	.col-md-4
