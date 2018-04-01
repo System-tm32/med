@@ -33,7 +33,11 @@ img
 	max-width: 100%
 	height: auto
 
-
+table
+	border-collapse: collapse
+	td
+		border-bottom: 1px solid #32609E
+		
 .container
 	margin: 0 auto
 	padding-left: 15px
@@ -44,7 +48,7 @@ img
 	flex-wrap: wrap
 	margin-left: -15px
 	margin-right: -15px
-.col-4,.col-8, .col-6, .col-md-4
+.col-4,.col-8, .col-6, .col-md-4, .col-2, .col-10
 	padding-right: 15px
 	padding-left: 15px
 	min-height: 1px
@@ -54,6 +58,10 @@ img
 	width:  66.666%
 .col-6
 	width: 50%
+.col-3
+	width: 25%
+.col-9
+	width: 75%
 
 .btn
 	padding: 20px
@@ -102,7 +110,7 @@ img
 .hidden-menu-ticker:checked ~ .btn-menu 
   left: 160px;
 
-.hidden-menu-ticker:checked ~ .menu-list 
+.hidden-menu-ticker:checked ~ .menu-main-menu-container .menu-list 
   left: 0;
 
 .hidden-menu-ticker:checked ~ .btn-menu span.first 
@@ -127,7 +135,7 @@ img
 		list-style-type: none
 		margin: 0
 		padding: 0
-		.list-item
+		li
 			a
 				padding: 17px
 				display: inline-block
@@ -139,7 +147,7 @@ img
 					box-shadow: inset 0px -3px 0px #fc6f6a
 
 .information-us
-	padding: 30px 0
+	padding: 30px 0 20px 0
 	.logo-wrapper
 		line-height: .8
 		.logo-text
@@ -155,7 +163,7 @@ img
 		.phone
 			display: inline-block
 			color: #4FBEED
-			margin-right: 10px
+			margin-right: 20px
 			text-transform: uppercase
 			.number
 				font-size: 30px
@@ -165,7 +173,16 @@ img
 			display: inline-block
 			position: relative
 			top: -10px
-			
+.carousel-content
+	text-align: center
+	margin: 0 auto
+	max-width: 500px
+	color: #fff
+	position: relative
+	top: 30%
+	.top-text
+		font-size: 36px
+
 .carousel-wrapper
 	position: relative
 	.item
@@ -175,13 +192,14 @@ img
 		background-size: cover
 		background-position: center center
 		background-color: #32609E
+		box-shadow: 0 0 0 128em rgba(50, 96, 158, 0.53) inset
 	.owl-next, .owl-prev
 		position: absolute
 		top: 47%
 		width: 50px
 		height: 50px
 		.fa-arrow-left, .fa-arrow-right
-			color: #32609E
+			color: #fff
 			font-size: 2em
 	.owl-next
 		right: 0
@@ -245,6 +263,7 @@ img
 		border-bottom: 1px solid #efefef
 	.btn
 		padding: 10px
+		width: 100px
 		&:hover
 			text-decoration: none
 			background: #FC6F6A
@@ -304,8 +323,15 @@ img
 	.specialist
 		text-align: center
 		width: 100%
+		.spec-name
+			padding-top: 10px
 		img
 			margin: 0 auto
+	.link-wrapper
+		text-align: right
+		width: 100%
+		.link
+			color: #FC6F6A
 
 .map
 	width: 100%
@@ -317,9 +343,34 @@ img
 	line-height: 1.3
 	.wrapper-section
 		font-size: 20px
-		.copyright
+		.top-text
 			margin-bottom: 30px
 			border-bottom: 1px dashed gray
 			padding-bottom: 20px
+		.soc-item
+			text-decoration: none
+			&:hover
+				color: #FC6F6A
+	.fa-vk, .fa-instagram
+		font-size: 1.5em
+		margin-right: 10px
+
+
+.single-wrapper
+	padding: 30px
+	.widget-wrapper
+		box-shadow: inset 1px 0px 0px rgba(0,0,0,0.1)
+		padding-left: 20px
+	.content-wrapper
+		margin-right: 30px
+		.title
+			color: #292235
+			box-shadow: inset 0px -1px 0px rgba(0,0,0,0.1)
+			font-size: 36px
+			padding-bottom: 20px
+		.content
+			margin-top: 30px
+			color: #292235
+
 
 @import "media" // Always at the end
